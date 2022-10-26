@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginFormComponent implements OnInit {
 
+  title : string = "Login Form Page title";
+
   constructor() { }
 
   ngOnInit(): void {

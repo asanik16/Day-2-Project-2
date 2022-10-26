@@ -14,7 +14,8 @@ import { LoginFormComponent } from './components/login-form/login-form.component
     CommonModule
   ],
   exports: [
-    LoginDefaultComponent
+    LoginDefaultComponent,
+    LoginFormComponent
   ]
 })
 export class LoginModule { }
