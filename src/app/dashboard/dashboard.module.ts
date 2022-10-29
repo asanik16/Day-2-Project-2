@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardDefaultComponent } from './components/dashboard-default/dashboard-default.component';
 import { DashboardDataHolderComponent } from './components/dashboard-data-holder/dashboard-data-holder.component';
-
+import { HttpClientModule } from '@angular/common/http'
 
 
 @NgModule({
@@ -11,7 +11,8 @@ import { DashboardDataHolderComponent } from './components/dashboard-data-holder
     DashboardDataHolderComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   exports: [
     DashboardDefaultComponent

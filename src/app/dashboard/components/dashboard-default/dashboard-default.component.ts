@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'
 import { DashboardServiceService} from '../../service/dashboard-service.service';
+import { HttpClientModule } from '@angular/common/http'
 
 @Component({
   selector: 'app-dashboard-default',
@@ -19,9 +20,15 @@ export class DashboardDefaultComponent implements OnInit {
   constructor(private route: ActivatedRoute, 
     private dashboardServiceService : DashboardServiceService
     ) { }
+    itemList: any [] = [];
+
   ngOnInit(): void {
-    let result = this.dashboardServiceService.getData();
-    console.log(result);
+    this.dashboardServiceService.getData().subscribe(res => {
+      this.itemList = res.entries;
+      console.log(this.itemList);
+    })
+    //let result = this.dashboardServiceService.getData();
+    //console.log(result);
   }
 
 }
