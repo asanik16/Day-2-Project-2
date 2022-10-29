@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Route, ActivatedRoute, ParamMap, Router } from '@angular/router'
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,10 @@ export class AppComponent implements OnInit {
   value : number = 11;
   array:string[] = ['red', 'green', 'blue'];
   
+  constructor(private router: Router){
+
+  }
+
   ngOnInit() {
     this.title = 'changed from on Init';
   }
@@ -23,4 +28,9 @@ export class AppComponent implements OnInit {
   onButtonClick(): void {
     this.value++;
   }
+
+  goToLogin(): void {
+    this.router.navigate(['items']);
+  }
+
 }

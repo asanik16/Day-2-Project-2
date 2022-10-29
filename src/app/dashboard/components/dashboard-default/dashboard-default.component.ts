@@ -9,6 +9,12 @@ import { DashboardServiceService} from '../../service/dashboard-service.service'
 })
 export class DashboardDefaultComponent implements OnInit {
 
+  items = ['Book', 'pen', 'khata', 'kolom'];
+
+  addItem(newItem: string) {
+    this.items.push(newItem);
+  }
+
   currentItem = "Book";
   constructor(private route: ActivatedRoute, 
     private dashboardServiceService : DashboardServiceService

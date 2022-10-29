@@ -1,4 +1,10 @@
 <p>dashboard-default works!</p>
 
+<app-dashboard-data-holder [item]="currentItem" (newItemEvent)="addItem($event)"></app-dashboard-data-holder>
 
-<app-dashboard-data-holder [item]="currentItem"></app-dashboard-data-holder>
+<ul>
+    <li *ngFor="let item of items">{{item}}</li>
+  </ul>
+<!--
+ <app-dashboard-data-holder [item]="currentItem"></app-dashboard-data-holder>
+-->
